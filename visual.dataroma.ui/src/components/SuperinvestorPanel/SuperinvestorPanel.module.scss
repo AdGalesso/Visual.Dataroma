@@ -1,0 +1,39 @@
+.container {
+  background-color: #40414F;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+
+
+  .manager {
+    position: relative;
+
+    span {
+      position: absolute;
+      color: #fff;
+      left: 5px;
+      top: 5px;
+    }
+  }
+}
+
+.image {
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  color: #fff;
+  min-width: 340px;
+}
