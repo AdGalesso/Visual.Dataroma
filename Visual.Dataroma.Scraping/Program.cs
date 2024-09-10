@@ -134,8 +134,9 @@ class Program
                 var model = "flux-realism";
                 var width = 256;
                 var height = 512;
+                var seed = new Random(1).Next(230);
 
-                var url = $"https://image.pollinations.ai/prompt/{prompt}?model={model}&width={width}&height={height}&nologo=true&enhance=true";
+                var url = $"https://image.pollinations.ai/prompt/{prompt}?model={model}&width={width}&height={height}&seed={seed}&nologo=true&enhance=true";
 
 
                 HttpResponseMessage response = await client.GetAsync(url);

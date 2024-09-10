@@ -10,7 +10,7 @@ const SuperinvestorPanel: React.FC<SuperinvestorPanelProps> = ({ data }) => {
     return (
         <div className={styles.container}>
             {data.map((item, i) => (
-                <div key={item.id} className={styles.panel}>
+                <div key={item.id} className={i % 2 === 0 ? styles.panelEven : styles.panelOdd}>
                     <div className={styles.manager}>
                         <span>#{i + 1}</span>
                         <img

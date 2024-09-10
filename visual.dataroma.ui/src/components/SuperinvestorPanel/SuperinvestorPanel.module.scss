@@ -4,7 +4,8 @@
   border-radius: 8px;
 }
 
-.panel {
+.panelEven,
+.panelOdd {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -24,6 +25,10 @@
   }
 }
 
+.panelOdd {
+  flex-direction: row-reverse;
+}
+
 .image {
   border-radius: 8px;
   margin-right: 20px;
@@ -35,5 +40,5 @@
   align-items: flex-start;
   flex-wrap: nowrap;
   color: #fff;
-  min-width: 340px;
+  width: 300px;
 }
