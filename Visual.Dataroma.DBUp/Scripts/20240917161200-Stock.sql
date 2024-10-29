@@ -1,0 +1,4 @@
+﻿CREATE TABLE stock (
+    code VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);

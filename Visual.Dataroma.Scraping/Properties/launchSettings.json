@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Visual.Dataroma.Scraping": {
+      "commandName": "Project",
+      "commandLineArgs": "holdings"
+    }
+  }
+}

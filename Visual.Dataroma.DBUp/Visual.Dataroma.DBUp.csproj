@@ -9,15 +9,21 @@
 
   <ItemGroup>
     <None Remove="Scripts\20240905170000-Superinvestors.sql" />
+    <None Remove="Scripts\20240917161200-Stock.sql" />
+    <None Remove="Scripts\20240917161400-Holdings.sql" />
+    <None Remove="Scripts\20240918085300-idx_superinvestor_stock.sql" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Scripts\20240918085300-idx_superinvestor_stock.sql" />
+    <EmbeddedResource Include="Scripts\20240917161400-Holdings.sql" />
+    <EmbeddedResource Include="Scripts\20240917161200-Stock.sql" />
     <EmbeddedResource Include="Scripts\20240905170000-Superinvestors.sql" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="dbup-core" Version="5.0.87" />
-    <PackageReference Include="dbup-sqlserver" Version="5.0.41" />
+    <PackageReference Include="dbup-postgresql" Version="5.0.40" />
   </ItemGroup>
 
 </Project>

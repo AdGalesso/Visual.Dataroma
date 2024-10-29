@@ -3,11 +3,14 @@ using System.Reflection;
 
 var connectionString =
         args.FirstOrDefault()
-        ?? "Server=localhost;Database=visual.dataroma;User Id=sa;Password=quantumPassw0rd;Trust Server Certificate=true";
+        ?? "Server=localhost;Port=5432;User Id=postgres;Password=quantumPassw0rd;Database=visual.dataroma;";
+
+
+EnsureDatabase.For.PostgresqlDatabase(connectionString);
 
 var upgrader =
     DeployChanges.To
-        .SqlDatabase(connectionString)
+        .PostgresqlDatabase(connectionString)
         .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
         .LogToConsole()
         .Build();

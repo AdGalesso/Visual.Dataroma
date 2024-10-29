@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ConnectionStrings__DefaultConnection: "Server=localhost;Database=visual.dataroma;User Id=sa;Password=quantumPassw0rd;"
+    depends_on:
+      - mssql
+    ports:
+      - "5195:80"
+
+  frontend:
+    build:
+      context: ./visual.dataroma.ui
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+
+volumes:
+  mssqldata:
